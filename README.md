@@ -28,13 +28,22 @@ format:
 
 ## Options
 
-*TODO*: If your format has options that can be set via document metadata, describe them.
+The default setting for class option generates a two column layout with:
+
+```
+classoption:
+ - twocolumn
+ - twoside
+```
+To set a corresponding author, ensure that the attribute "corresponding" is true and that they have an email listed.
+
+For proper formatting, each affiliation should be given a letter id (like `a`, `b`, ..., `z`).
 
 ## Example
 
 Here is the source code for a minimal sample document: [template.qmd](template.qmd).
 
-<!-- pdftools::pdf_convert('template.pdf',pages = 1) 
+<!-- pdftools::pdf_convert('template.pdf', pages = 1) 
 ![[template.qmd](template.qmd)](template_1.png) -->
 
 ## License

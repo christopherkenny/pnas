@@ -58,11 +58,9 @@ classoption:
 The template relies on having a full first page which is styled separately.
 If you see a warning to the tune of "LaTeX Error: Not in outer par mode." or referencing `\end{document}`, try writing more or adding filler text and recompiling.
 
-
-
 # Using this template
 
-\firstpage{12}
+\firstpage{9}
 <!--Use `\firstpage` to indicate which paragraph and line will start the second page and subsequent formatting. In this example, there are a total of 11 paragraphs on the first page, counting the first level heading as a paragraph. The value {12} represents the number of the paragraph starting the second page. If a paragraph runs over onto the second page, include a bracket with the paragraph line number starting the second page, followed by the paragraph number in curly brackets, e.g. `"\firstpage[4]{11}"`.-->
 
 
@@ -73,11 +71,11 @@ Note: please start your introduction without including the word `Introduction` a
 
 ## Author Affiliations {.unnumbered}
 
-Include department, institution, and complete address, with the ZIP/postal code, for each author. Use lower case letters to match authors with institutions, as shown in the example. PNAS strongly encourages authors to supply an \href{https://orcid.org/}{ORCID identifier} for each author. Individual authors must link their ORCID account to their PNAS account at \href{http://www.pnascentral.org/}{www.pnascentral.org}. For proper authentication, authors must provide their ORCID at submission and are not permitted to add ORCIDs on proofs.
+Include department, institution, and complete address, with the ZIP/postal code, for each author. Use lower case letters to match authors with institutions, as shown in the example. PNAS strongly encourages authors to supply an [ORCID identifier](https://orcid.org/) for each author. Individual authors must link their ORCID account to their PNAS account at [www.pnascentral.org](http://www.pnascentral.org/). For proper authentication, authors must provide their ORCID at submission and are not permitted to add ORCIDs on proofs.
 
 ## Submitting Manuscripts {.unnumbered}
 
-All authors must submit their articles at \href{http://www.pnascentral.org/cgi-bin/main.plex}{PNAScentral}. If you are using Overleaf to write your article, you can use the ``Submit to PNAS'' option in the top bar of the editor window.
+All authors must submit their articles at [PNAScentral](http://www.pnascentral.org/cgi-bin/main.plex). If you are using Overleaf to write your article, you can use the ``Submit to PNAS'' option in the top bar of the editor window.
 
 ## Format {.unnumbered}
 
@@ -94,7 +92,102 @@ References should be cited in numerical order as they appear in text; this will 
 
 ## Data Archival {.unnumbered}
 
-PNAS must be able to archive the data essential to a published article. Where such archiving is not possible, deposition of data in public databases, such as GenBank, ArrayExpress, Protein Data Bank, Unidata, and others outlined in the \href{https://www.pnas.org/author-center/editorial-and-journal-policies#materials-and-data-availability}{Information for Authors}, is acceptable.
+PNAS must be able to archive the data essential to a published article. Where such archiving is not possible, deposition of data in public databases, such as GenBank, ArrayExpress, Protein Data Bank, Unidata, and others outlined in the [Information for Authors](https://www.pnas.org/author-center/editorial-and-journal-policies#materials-and-data-availability), is acceptable.
 
 ## Language-Editing Services {.unnumbered}
 Prior to submission, authors who believe their manuscripts would benefit from professional editing are encouraged to use a language-editing service (see list at https://www.pnas.org/author-center/language-editing). PNAS does not take responsibility for or endorse these services, and their use has no bearing on acceptance of a manuscript for publication.
+
+## Figures and Tables {.unnumbered}
+
+Figures can be included using Quarto's syntax, code chunks, or with LaTeX.
+
+For simple figures, Quarto syntax is typically easiest.
+Full details are available in [the Quarto documentation](https://quarto.org/docs/authoring/figures.html).
+
+![Placeholder image of a frog with a long example legend to show justification setting.](figs/frog.pdf){#fig-frog}
+
+Tables can similarly be included using Quarto's syntax, code chunks, or with LaTeX.
+I tend to use code chunks, but LaTeX works very well for classic tables, like regression tables or summary statistics.
+
+\begin{table}[t!]
+\centering
+\caption{Comparison of the fitted potential energy surfaces and ab initio benchmark electronic energy calculations}
+\begin{tabular}{lrrr}
+Species & CBS & CV & G3 \\
+\midrule
+1. Acetaldehyde & 0.0 & 0.0 & 0.0 \\
+2. Vinyl alcohol & 9.1 & 9.6 & 13.5 \\
+3. Hydroxyethylidene & 50.8 & 51.2 & 54.0\\
+\bottomrule
+\end{tabular}
+
+\addtabletext{nomenclature for the TSs refers to the numbered species in the table.}
+\end{table}
+
+
+### Digital Figures {.unnumbered}
+
+EPS, high-resolution PDF, and PowerPoint are preferred formats for figures that will be used in the main manuscript. Authors may submit PRC or U3D files for 3D images; these must be accompanied by 2D representations in TIFF, EPS, or high-resolution PDF format. Color images must be in RGB (red, green, blue) mode. Include the font files for any text.
+
+Images must be provided at final size, preferably 1 column width (8.7cm). Figures wider than 1 column should be sized to 11.4cm or 17.8cm wide. Numbers, letters, and symbols should be no smaller than 6 points (2mm) and no larger than 12 points (6mm) after reduction and must be consistent.
+
+Figures and tables should be labelled and referenced in the standard way using the `\label{}` and `\ref{}` commands.
+
+Figure @fig-frog shows an example of how to insert a column-wide figure. To insert a figure wider than one column, please use the `figure*` environment. Figures wider than one column should be sized to 11.4 cm or 17.8 cm wide. Use `SCfigure*` environment for a wide figure with side legends, such as @fig-side.
+
+In Quarto, we can do these by setting the `fig-env` command to `figure*` or `SCfigure*`
+
+```{r}
+#| label: fig-side
+#| fig-cap: "This legend would be placed at the side of the figure, rather than below it."
+#| fig-env: "SCfigure*"
+#| echo: false
+# tell it the options as comments with a | and a space, as above.
+# set echo: false to avoid printing this text
+knitr::include_graphics('figs/frog.pdf')
+```
+
+
+## Tables {.unnumbered}
+Tables should be included in the main manuscript file and should not be uploaded separately.
+
+
+## Single column equations {.unnumbered}
+
+Authors may use 1- or 2-column equations in their article, according to their preference.
+
+To allow an equation to span both columns, use the `\begin{figure*}...\end{figure*}` environment mentioned above for figures.
+
+Note that the use of the `widetext` environment for equations is not recommended, and should not be used.
+
+\begin{figure*}[bt!]
+\begin{align*}
+(x+y)^3&=(x+y)(x+y)^2\\
+       &=(x+y)(x^2+2xy+y^2) \numberthis \label{eqn:example} \\
+       &=x^3+3x^2y+3xy^3+x^3.
+\end{align*}
+\end{figure*}
+
+# Material and Methods {.unnumbered}
+
+## Supporting Information Appendix (SI) {.unnumbered}
+
+Authors should submit SI as a single separate SI Appendix PDF file, combining all text, figures, tables, movie legends, and SI references. SI will be published as provided by the authors; it will not be edited or composed. Additional details can be found in the [PNAS Author Center](https://www.pnas.org/authors/submitting-your-manuscript#manuscript-formatting-guidelines). The PNAS Overleaf SI template can be found [here](https://www.overleaf.com/latex/templates/pnas-template-for-supplementary-information/wqfsfqwyjtsd). Refer to the SI Appendix in the manuscript at an appropriate point in the text. Number supporting figures and tables starting with S1, S2, etc.
+
+Authors who place detailed materials and methods in an SI Appendix must provide sufficient detail in the main text methods to enable a reader to follow the logic of the procedures and results and also must reference the SI methods. If a paper is fundamentally a study of a new method or technique, then the methods must be described completely in the main text.
+
+### SI Datasets {.unnumbered}
+
+Supply .xlsx, .csv, .txt, .rtf, or .pdf files. This file type will be published in raw format and will not be edited or composed.
+
+
+### SI Movies {.unnumbered}
+
+Supply Audio Video Interleave (avi), Quicktime (mov), Windows Media (wmv), animated GIF (gif), or MPEG files. Movie legends should be included in the SI Appendix file. All movies should be submitted at the desired reproduction size and length. Movies should be no more than 10MB in size.
+
+# References
+\bibsplit[2]
+<!-- Use \bibsplit to split the references from the body of the text. Value "[2]" represents the number of reference in the left column (Note: Please avoid single column figures & tables on this page.) -->
+
+:::{#refs}
+:::

@@ -19,7 +19,7 @@ author:
         city: Cambridge
         state: MA
         postal-code: 02138
-     attributes:
+    attributes:
       equal-contributor: true
   - name: Author Two
     affiliations:

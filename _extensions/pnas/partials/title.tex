@@ -1,0 +1,36 @@
+\templatetype{$if(template_type)$ $template_type$ $else$ pnasresearcharticle $endif$}
+
+$if(title)$
+\title{$title$}
+$endif$
+
+%id authors
+
+$if(runningauthor)$
+\leadauthor{$runningauthor$}
+$endif$
+
+$if(significance)$
+\significancestatement{$significance$}
+$endif$
+
+$if(author_contributions)$
+\authorcontributions{$author_contributions$}
+$endif$
+
+$if(conflict_of_interest)$
+\authordeclaration{$conflict_of_interest$}
+$endif$
+
+% id equal authors
+
+% id corr authors
+
+$if(keywords)$
+\keywords{
+  $for(keywords)$
+  $keywords$
+  $sep$|
+  $endfor$
+}
+$endif$

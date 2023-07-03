@@ -19,8 +19,8 @@ contributes:
         - jabbrv-ltwa-en.ldf
       template-partials:
         - "partials/doc-class.tex"
+        - "partials/_affiliation.tex"
         - "partials/title.tex"
-        - "partials/_affilation.tex"
         - "partials/before-body.tex"
     html:
       css: styles.css

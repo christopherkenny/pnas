@@ -16,7 +16,7 @@ $endif$
 $for(by-author)$
 \author[$if(by-author.affiliations)$$for(by-author.affiliations)$$it.id$$sep$,$endfor$$endif$%
 $if(by-author.attributes.equal-contributor)$,\equalcont$endif$%
-$if(by-author.attributes.corresponding)$,\correspond$endif$
+$if(by-author.attributes.corresponding)$,\correspond$endif$%
 ]{$by-author.name.literal$}
 $endfor$
 

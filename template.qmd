@@ -63,38 +63,38 @@ If you see a warning to the tune of "LaTeX Error: Not in outer par mode." or ref
 # Using this template
 
 \firstpage{12}
-Use `\firstpage` to indicate which paragraph and line will start the second page and subsequent formatting. In this example, there are a total of 11 paragraphs on the first page, counting the first level heading as a paragraph. The value {12} represents the number of the paragraph starting the second page. If a paragraph runs over onto the second page, include a bracket with the paragraph line number starting the second page, followed by the paragraph number in curly brackets, e.g. `"\firstpage[4]{11}"`.
+<!--Use `\firstpage` to indicate which paragraph and line will start the second page and subsequent formatting. In this example, there are a total of 11 paragraphs on the first page, counting the first level heading as a paragraph. The value {12} represents the number of the paragraph starting the second page. If a paragraph runs over onto the second page, include a bracket with the paragraph line number starting the second page, followed by the paragraph number in curly brackets, e.g. `"\firstpage[4]{11}"`.-->
 
 
 If your first paragraph (i.e. with the `\dropcap`) contains a list environment (quote, quotation, theorem, definition, enumerate, itemize...), the line after the list may have some extra indentation. If this is the case, add `\parshape=0` to the end of the list environment.
-\dropcap{T}his PNAS journal template is provided to help you write your work in the correct journal format. Instructions for use are provided below.
+This PNAS journal template is provided to help you write your work in the correct journal format. Instructions for use are provided below.
 
-Note: please start your introduction without including the word ``Introduction'' as a section heading (except for math articles in the Physical Sciences section); this heading is implied in the first paragraphs.
+Note: please start your introduction without including the word `Introduction` as a section heading (except for math articles in the Physical Sciences section); this heading is implied in the first paragraphs.
 
-### Author Affiliations {.unnumbered}
+## Author Affiliations {.unnumbered}
 
 Include department, institution, and complete address, with the ZIP/postal code, for each author. Use lower case letters to match authors with institutions, as shown in the example. PNAS strongly encourages authors to supply an \href{https://orcid.org/}{ORCID identifier} for each author. Individual authors must link their ORCID account to their PNAS account at \href{http://www.pnascentral.org/}{www.pnascentral.org}. For proper authentication, authors must provide their ORCID at submission and are not permitted to add ORCIDs on proofs.
 
-### Submitting Manuscripts {.unnumbered}
+## Submitting Manuscripts {.unnumbered}
 
 All authors must submit their articles at \href{http://www.pnascentral.org/cgi-bin/main.plex}{PNAScentral}. If you are using Overleaf to write your article, you can use the ``Submit to PNAS'' option in the top bar of the editor window.
 
-### Format {.unnumbered}
+## Format {.unnumbered}
 
 Many authors find it useful to organize their manuscripts with the following order of sections: title, author line and affiliations, keywords, abstract, significance statement, introduction, results, discussion, materials and methods, acknowledgments, and references. Other orders and headings are permitted.
 
-### Manuscript Length {.unnumbered}
+## Manuscript Length {.unnumbered}
 
 A standard 6-page article is approximately 4,000 words, 50 references, and 4 medium-size graphical elements (i.e., figures and tables). The preferred length of articles remains at 6 pages, but PNAS will allow articles up to a maximum of 12 pages.
 
 
-### References {.unnumbered}
+## References {.unnumbered}
 
 References should be cited in numerical order as they appear in text; this will be done automatically via bibtex, e.g. \cite{belkin2002using} and \cite{berard1994embedding,coifman2005geometric,phdthesis,masterthesis}. All references cited in the main text should be included in the main manuscript file.
 
-### Data Archival {.unnumbered}
+## Data Archival {.unnumbered}
 
 PNAS must be able to archive the data essential to a published article. Where such archiving is not possible, deposition of data in public databases, such as GenBank, ArrayExpress, Protein Data Bank, Unidata, and others outlined in the \href{https://www.pnas.org/author-center/editorial-and-journal-policies#materials-and-data-availability}{Information for Authors}, is acceptable.
 
-### Language-Editing Services {.unnumbered}
+## Language-Editing Services {.unnumbered}
 Prior to submission, authors who believe their manuscripts would benefit from professional editing are encouraged to use a language-editing service (see list at https://www.pnas.org/author-center/language-editing). PNAS does not take responsibility for or endorse these services, and their use has no bearing on acceptance of a manuscript for publication.

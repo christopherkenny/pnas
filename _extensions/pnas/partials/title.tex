@@ -12,7 +12,6 @@ $else$
 \newcommand{\correspond}{1}
 $endif$
 
-%id authors
 $for(by-author)$
 \author[$if(by-author.affiliations)$$for(by-author.affiliations)$$it.id$$sep$,$endfor$$endif$%
 $if(by-author.attributes.equal-contributor)$,\equalcont$endif$%
@@ -23,17 +22,6 @@ $endfor$
 $for(by-affiliation)$
 \affil[$it.id$]{$_affiliation.tex()$}
 $endfor$
-
-% \author[a,c,1]{Author One}
-% \author[b,1,2]{Author Two}
-% \author[a]{Author Three}
-% 
-% \affil[a]{Affiliation One}
-% \affil[b]{Affiliation Two}
-% \affil[c]{Affiliation Three}
-
-
-
 
 $if(runningauthor)$
 \leadauthor{$runningauthor$}
@@ -55,7 +43,11 @@ $if(equal-contributor)$
 \equalauthors{\textsuperscript{\equalcont} $equal-contributor$}
 $endif$
 
-% id corr authors
+$for(by-author)$
+$if(by-author.attributes.corresponding)$
+\correspondingauthor{\textsuperscript{\correspond}To whom correspondence should be addressed. E-mail: $by-author.email$}
+$endif$
+$endfor$
 
 $if(keywords)$
 \keywords{$for(keywords)$$keywords$$sep$ | $endfor$}

@@ -4,7 +4,35 @@ $if(title)$
 \title{$title$}
 $endif$
 
+\newcommand{\equalcont}{1}
+
+$if(equal-contributor)$
+\newcommand{\correspond}{2}
+$else$
+\newcommand{\correspond}{1}
+$endif$
+
 %id authors
+$for(by-author)$
+\author[$if(by-author.affiliations)$$for(by-author.affiliations)$$it.id$$sep$,$endfor$$endif$%
+$if(by-author.attributes.equal-contributor)$,\equalcont$endif$%
+$if(by-author.attributes.corresponding)$,\correspond$endif$
+]{$by-author.name.literal$}
+$endfor$
+
+$for(by-affiliation)$
+\affil[$it.id$]{$_affiliation.tex()$}
+$endfor$
+
+% \author[a,c,1]{Author One}
+% \author[b,1,2]{Author Two}
+% \author[a]{Author Three}
+% 
+% \affil[a]{Affiliation One}
+% \affil[b]{Affiliation Two}
+% \affil[c]{Affiliation Three}
+
+
 
 
 $if(runningauthor)$
@@ -23,7 +51,9 @@ $if(conflict_of_interest)$
 \authordeclaration{$conflict_of_interest$}
 $endif$
 
-% id equal authors
+$if(equal-contributor)$
+\equalauthors{\textsuperscript{\equalcont} $equal-contributor$}
+$endif$
 
 % id corr authors
 

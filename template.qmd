@@ -43,6 +43,7 @@ significance: |
   Authors must submit a 120-word maximum statement about the significance of their research paper written at a level understandable to an undergraduate educated scientist outside their field of speciality. The primary goal of the significance statement is to explain the relevance of the work in broad context to a broad readership. The significance statement appears in the paper itself and is required for all research papers.
 author_contributions: "Please provide details of author contributions here."
 conflict_of_interest: "Please declare any competing interests here."
+equal-contributor: "A.O.(Author One) contributed equally to this work with A.T. (Author Two) (remove if not applicable)."
 keywords: [template, demo]
 acknowledgements: | 
   Please include your acknowledgments here, set in a single paragraph. Please do not include any acknowledgments in the Supporting Information, or anywhere else in the manuscript.
@@ -53,9 +54,13 @@ classoption:
  - twoside
 ---
 
-A word of warning: This template will fail with a "Not in outer par mode" warning if you try to compile it with less than one page of text.
+\dropcap{A} word of warning: This template will fail with a "Not in outer par mode" warning if you try to compile it with less than one page of text.
 The template relies on having a full first page which is styled separately.
 If you see a warning to the tune of "LaTeX Error: Not in outer par mode." or referencing `\end{document}`, try writing more or adding filler text and recompiling.
+
+
+
+# Using this template
 
 \firstpage{12}
 Use `\firstpage` to indicate which paragraph and line will start the second page and subsequent formatting. In this example, there are a total of 11 paragraphs on the first page, counting the first level heading as a paragraph. The value {12} represents the number of the paragraph starting the second page. If a paragraph runs over onto the second page, include a bracket with the paragraph line number starting the second page, followed by the paragraph number in curly brackets, e.g. `"\firstpage[4]{11}"`.

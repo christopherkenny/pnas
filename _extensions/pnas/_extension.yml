@@ -10,6 +10,15 @@ contributes:
         - pnas.lua
     pdf:
       include-in-header: header.tex
+      format-resources:
+        - pnas-new.cls
+        - pnas-new.bst
+        - pnasresearcharticle.sty
+        - jabbrv.sty
+        - jabbrv-ltwa-all.ldf
+        - jabbrv-ltwa-en.ldf
+      template-partials:
+        - "partials/doc-class.tex"
     html:
       css: styles.css
 

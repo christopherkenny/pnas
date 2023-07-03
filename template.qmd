@@ -48,6 +48,10 @@ keywords: [template, demo]
 acknowledgements: | 
   Please include your acknowledgments here, set in a single paragraph. Please do not include any acknowledgments in the Supporting Information, or anywhere else in the manuscript.
 bibliography: bibliography.bib  
+fontsize: "9pt"
+classoption:
+ - twocolumn
+ - twoside
 ---
 
 ## Introduction {#sec-intro}

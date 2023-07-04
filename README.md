@@ -39,6 +39,9 @@ To set a corresponding author, ensure that the attribute "corresponding" is true
 
 For proper formatting, each affiliation should be given a letter id (like `a`, `b`, ..., `z`).
 
+This template is designed for `template_type: pnasresearcharticle` (the default).
+It can also take options `pnasmathematics` or `pnasinvited`, but these are not formally supported, as they have official alternative formats available on [Overleaf](https://www.overleaf.com/gallery/tagged/pnas).
+
 ## Example
 
 Here is the source code for a minimal sample document: [template.qmd](template.qmd).

@@ -3,7 +3,6 @@ title: Quarto Template for PNAS Submissions
 format:
   pnas-pdf:
     keep-tex: true  
-  pnas-html: default
 author:
   - name: Author One
     affiliations:

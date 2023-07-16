@@ -6,8 +6,6 @@ contributes:
   formats:
     common:
       toc: false
-      filters:
-        - pnas.lua
     pdf:
       include-in-header: header.tex
       format-resources:
@@ -23,6 +21,3 @@ contributes:
         - "partials/title.tex"
         - "partials/before-body.tex"
         - "partials/before-bib.tex"
-    html:
-      css: styles.css
-

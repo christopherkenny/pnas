@@ -68,35 +68,36 @@ This PNAS journal template is provided to help you write your work in the correc
 
 Note: please start your introduction without including the word `Introduction` as a section heading (except for math articles in the Physical Sciences section); this heading is implied in the first paragraphs.
 
-## Author Affiliations {.unnumbered}
+## Author Affiliations
 
 Include department, institution, and complete address, with the ZIP/postal code, for each author. Use lower case letters to match authors with institutions, as shown in the example. PNAS strongly encourages authors to supply an [ORCID identifier](https://orcid.org/) for each author. Individual authors must link their ORCID account to their PNAS account at [www.pnascentral.org](http://www.pnascentral.org/). For proper authentication, authors must provide their ORCID at submission and are not permitted to add ORCIDs on proofs.
 
-## Submitting Manuscripts {.unnumbered}
+## Submitting Manuscripts
 
 All authors must submit their articles at [PNAScentral](http://www.pnascentral.org/cgi-bin/main.plex). If you are using Overleaf to write your article, you can use the ``Submit to PNAS'' option in the top bar of the editor window.
 
-## Format {.unnumbered}
+## Format
 
 Many authors find it useful to organize their manuscripts with the following order of sections: title, author line and affiliations, keywords, abstract, significance statement, introduction, results, discussion, materials and methods, acknowledgments, and references. Other orders and headings are permitted.
 
-## Manuscript Length {.unnumbered}
+## Manuscript Length
 
 A standard 6-page article is approximately 4,000 words, 50 references, and 4 medium-size graphical elements (i.e., figures and tables). The preferred length of articles remains at 6 pages, but PNAS will allow articles up to a maximum of 12 pages.
 
 
-## References {.unnumbered}
+## References
 
-References should be cited in numerical order as they appear in text; this will be done automatically via bibtex, e.g. \cite{belkin2002using} and \cite{berard1994embedding,coifman2005geometric,phdthesis,masterthesis}. All references cited in the main text should be included in the main manuscript file.
+References should be cited in numerical order as they appear in text; this will be done automatically via bibtex, e.g. [@belkin2002using] and [@berard1994embedding, @coifman2005geometric,@phdthesis,@masterthesis]. All references cited in the main text should be included in the main manuscript file.
 
-## Data Archival {.unnumbered}
+## Data Archival
 
 PNAS must be able to archive the data essential to a published article. Where such archiving is not possible, deposition of data in public databases, such as GenBank, ArrayExpress, Protein Data Bank, Unidata, and others outlined in the [Information for Authors](https://www.pnas.org/author-center/editorial-and-journal-policies#materials-and-data-availability), is acceptable.
 
-## Language-Editing Services {.unnumbered}
+## Language-Editing Services
+
 Prior to submission, authors who believe their manuscripts would benefit from professional editing are encouraged to use a language-editing service (see list at https://www.pnas.org/author-center/language-editing). PNAS does not take responsibility for or endorse these services, and their use has no bearing on acceptance of a manuscript for publication.
 
-## Figures and Tables {.unnumbered}
+## Figures and Tables
 
 Figures can be included using Quarto's syntax, code chunks, or with LaTeX.
 
@@ -106,25 +107,17 @@ Full details are available in [the Quarto documentation](https://quarto.org/docs
 ![Placeholder image of a frog with a long example legend to show justification setting.](figs/frog.pdf){#fig-frog}
 
 Tables can similarly be included using Quarto's syntax, code chunks, or with LaTeX.
-I tend to use code chunks, but LaTeX works very well for classic tables, like regression tables or summary statistics.
+In general, you should aim to include tables with Quarto syntax, as this is the most flexible and portable option.
 
-\begin{table}[t!]
-\centering
-\caption{Comparison of the fitted potential energy surfaces and ab initio benchmark electronic energy calculations}
-\begin{tabular}{lrrr}
-Species & CBS & CV & G3 \\
-\midrule
-1. Acetaldehyde & 0.0 & 0.0 & 0.0 \\
-2. Vinyl alcohol & 9.1 & 9.6 & 13.5 \\
-3. Hydroxyethylidene & 50.8 & 51.2 & 54.0\\
-\bottomrule
-\end{tabular}
+| Species              | CBS  | CV   | G3   |
+|----------------------|------|------|------|
+| 1. Acetaldehyde      | 0.0  | 0.0  | 0.0  |
+| 2. Vinyl alcohol     | 9.1  | 9.6  | 13.5 |
+| 3. Hydroxyethylidene | 50.8 | 51.2 | 54.0 |
 
-\addtabletext{nomenclature for the TSs refers to the numbered species in the table.}
-\end{table}
+: Comparison of the fitted potential energy surfaces and ab initio benchmark electronic energy calculations.  Nomenclature for the TSs refers to the numbered species in the table.
 
-
-### Digital Figures {.unnumbered}
+### Digital Figures
 
 EPS, high-resolution PDF, and PowerPoint are preferred formats for figures that will be used in the main manuscript. Authors may submit PRC or U3D files for 3D images; these must be accompanied by 2D representations in TIFF, EPS, or high-resolution PDF format. Color images must be in RGB (red, green, blue) mode. Include the font files for any text.
 
@@ -146,12 +139,10 @@ In Quarto, we can do these by setting the `fig-env` command to `figure*` or `SCf
 knitr::include_graphics('figs/frog.pdf')
 ```
 
-
-## Tables {.unnumbered}
+## Tables
 Tables should be included in the main manuscript file and should not be uploaded separately.
 
-
-## Single column equations {.unnumbered}
+## Single column equations
 
 Authors may use 1- or 2-column equations in their article, according to their preference.
 
@@ -167,20 +158,20 @@ Note that the use of the `widetext` environment for equations is not recommended
 \end{align*}
 \end{figure*}
 
-# Material and Methods {.unnumbered}
+# Material and Methods
 
-## Supporting Information Appendix (SI) {.unnumbered}
+## Supporting Information Appendix (SI)
 
 Authors should submit SI as a single separate SI Appendix PDF file, combining all text, figures, tables, movie legends, and SI references. SI will be published as provided by the authors; it will not be edited or composed. Additional details can be found in the [PNAS Author Center](https://www.pnas.org/authors/submitting-your-manuscript#manuscript-formatting-guidelines). The PNAS Overleaf SI template can be found [here](https://www.overleaf.com/latex/templates/pnas-template-for-supplementary-information/wqfsfqwyjtsd). Refer to the SI Appendix in the manuscript at an appropriate point in the text. Number supporting figures and tables starting with S1, S2, etc.
 
 Authors who place detailed materials and methods in an SI Appendix must provide sufficient detail in the main text methods to enable a reader to follow the logic of the procedures and results and also must reference the SI methods. If a paper is fundamentally a study of a new method or technique, then the methods must be described completely in the main text.
 
-### SI Datasets {.unnumbered}
+### SI Datasets
 
 Supply .xlsx, .csv, .txt, .rtf, or .pdf files. This file type will be published in raw format and will not be edited or composed.
 
 
-### SI Movies {.unnumbered}
+### SI Movies
 
 Supply Audio Video Interleave (avi), Quicktime (mov), Windows Media (wmv), animated GIF (gif), or MPEG files. Movie legends should be included in the SI Appendix file. All movies should be submitted at the desired reproduction size and length. Movies should be no more than 10MB in size.
 

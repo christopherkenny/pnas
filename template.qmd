@@ -115,7 +115,7 @@ In general, you should aim to include tables with Quarto syntax, as this is the 
 | 2. Vinyl alcohol     | 9.1  | 9.6  | 13.5 |
 | 3. Hydroxyethylidene | 50.8 | 51.2 | 54.0 |
 
-: Comparison of the fitted potential energy surfaces and ab initio benchmark electronic energy calculations.  Nomenclature for the TSs refers to the numbered species in the table.
+: Comparison of the fitted potential energy surfaces and ab initio benchmark electronic energy calculations.  Nomenclature for the TSs refers to the numbered species in the table. {#tbl-chemistry}
 
 ### Digital Figures
 

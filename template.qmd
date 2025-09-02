@@ -1,8 +1,7 @@
 ---
 title: Quarto Template for PNAS Submissions
 format:
-  pnas-pdf:
-    keep-tex: true  
+  pnas-pdf: default
 author:
   - name: Author One
     affiliations:
@@ -174,6 +173,12 @@ Supply .xlsx, .csv, .txt, .rtf, or .pdf files. This file type will be published 
 ### SI Movies
 
 Supply Audio Video Interleave (avi), Quicktime (mov), Windows Media (wmv), animated GIF (gif), or MPEG files. Movie legends should be included in the SI Appendix file. All movies should be submitted at the desired reproduction size and length. Movies should be no more than 10MB in size.
+
+# Make the example longer
+
+Try to avoid spacing things such that a full width figure ends on the last page, as this (may) conflict with PNAS's special reference setup.
+
+{{< lipsum 10 >}}
 
 # References
 \bibsplit[2]

@@ -39,7 +39,7 @@ To set a corresponding author, ensure that the attribute "corresponding" is true
 
 For proper formatting, each affiliation should be given a letter id (like `a`, `b`, ..., `z`).
 
-This template is designed for `template_type: pnasresearcharticle` (the default).
+This template is designed for `template_type: pnasresearcharticle` (the default) or `template_type: pnasbriefreport`.
 It can also take options `pnasmathematics` or `pnasinvited`, but these are not formally supported, as they have official alternative formats available on [Overleaf](https://www.overleaf.com/gallery/tagged/pnas).
 
 ## Example
@@ -51,5 +51,7 @@ Here is the source code for a minimal sample document: [template.qmd](template.q
 
 ## License
 
-This modifies the Overleaf PNAS Template, available at <https://www.overleaf.com/latex/templates/template-for-preparing-your-research-report-submission-to-pnas-using-overleaf-2023/whbdryzwztnd>. The original template is licensed under the [LaTeX Project Public License 1.3c](https://www.latex-project.org/lppl/lppl-1-3c/). The template within is derived from this and makes modifications to separate into the full document into Quarto "partials". All modifications can be seen in this repo. 
+This modifies the Overleaf PNAS Template, available at <https://www.overleaf.com/latex/templates/template-for-preparing-your-research-report-submission-to-pnas-using-overleaf-2023/whbdryzwztnd>. The original template is licensed under the [LaTeX Project Public License 1.3c](https://www.latex-project.org/lppl/lppl-1-3c/). The additional style file for Brief Reports comes from <https://www.overleaf.com/latex/templates/template-for-preparing-your-brief-report-submission-to-pnas-using-overleaf-2023/kbxgqwycmpjq> and is also licensed under the LaTeX Project Public License 1.3c.
+
+The template within is derived from this and makes modifications to separate into the full document into Quarto "partials". All modifications can be seen in this repo. 
 

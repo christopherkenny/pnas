@@ -1,0 +1,48 @@
+%%% PNAS two column brief-report style file
+%%% For use with pnas-new.cls
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pnasbriefreport}[2019/05/28 v1.1 PNAS two column brief report style]
+
+%% Set whether the abstract is set into the first column
+\setboolean{shortarticle}{true}
+% true = set into first column
+% false = spans page width
+
+%% Set colors
+\definecolor{color2}{RGB}{130,0,0} % color
+
+%% Set up the first page footnote/fact box here
+\RequirePackage{float}
+\floatstyle{plain}
+\newfloat{sigstatement}{b!}{sst}
+
+% \additionalelement{} % Don't use the \additionalelement field (set blank)
+%% v1.1 Better: just suppress sigstatement
+\renewcommand{\significancestatement}[1]{}
+\additionalelement{%
+\afterpage{\begin{sigstatement}
+\sffamily
+\mdfdefinestyle{pnassigstyle}{linewidth=0pt,innertopmargin=0pt,innerrightmargin=0pt,innerbottommargin=-30pt,innerleftmargin=0pt,userdefinedwidth=155pt}
+%     \medskip
+\begin{mdframed}[style=pnassigstyle]%
+\scriptsize
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\if!\AB@affillist!\else Author affiliations: \AB@affillist\par\vskip11.7pt
+\hrule width 157pt height.5pt\par\vskip13.5pt\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\@ifundefined{@authorcontributions}{}{\@authorcontributions}
+\vskip5pt%
+\@ifundefined{@authordeclaration}{}{\@authordeclaration}
+\vskip5pt%
+\@ifundefined{@equalauthors}{}{\@equalauthors}
+\vskip5pt%
+\@ifundefined{@correspondingauthor}{}{\@correspondingauthor}
+\end{mdframed}\vskip-6pt
+\end{sigstatement}\clearpage}
+}
+\apptocmd{\@maketitle}{%
+\tikz[remember picture,overlay]
+  \node[rotate=90,anchor=south east,text=white,fill=black,font=\sffamily\bfseries,inner xsep=2.5em,inner ysep=0.8em,text depth=0.8em] at (current page.north east) {BRIEF REPORT};
+}
+
+\endinput
